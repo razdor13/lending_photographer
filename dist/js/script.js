@@ -14,33 +14,28 @@ tabsItems.forEach((item) => {
         lightbox.show();
     });
 });
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!tabs
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-const app = document.getElementById("app");
-const tabButtons = app.querySelectorAll(".tab-btn");
-const tabs = app.querySelectorAll(".tabs__content");
+document.getElementById("app").addEventListener("click", function (event) {
+    const clickedElement = event.target;
 
-// Set first tab-btn as selected and unhide the first tab
-tabButtons[0].classList.toggle("selected", true);
-tabs[0].classList.toggle("hidden", false);
+    // Перевірка, чи було натиснуто на саму кнопку або її дочірній елемент
+    const tabButton = clickedElement.closest(".tab-btn");
+    if (tabButton) {
+        const tabButtons = document.querySelectorAll(".tab-btn");
+        const tabs = document.querySelectorAll(".tabs__content");
 
-tabButtons.forEach((tabButton) => {
-    tabButton.addEventListener("click", (e) => {
-        // Deselect all tab buttons...
-        Array.from(e.target.parentNode.children).forEach((tabBtn) => {
-            tabBtn.classList.toggle("selected", false);
+        tabButtons.forEach((tabButton) => {
+            tabButton.classList.remove("tab-btn__active");
         });
-        // Then mark this one as selected
-        e.target.classList.toggle("selected", true);
+        tabButton.classList.add("tab-btn__active");
 
-        const selectedTabId = e.target.dataset.tabContentId;
+        const selectedTabId = tabButton.getAttribute("data-tab-content-id");
         const selectedTab = document.getElementById(selectedTabId);
 
-        // Hide all the tabs...
-        Array.from(selectedTab.parentNode.children).forEach((tab) => {
-            tab.classList.toggle("hidden", true);
+        tabs.forEach((tab) => {
+            tab.classList.add("hidden");
         });
-        // Unhide selected tab
-        selectedTab.classList.toggle("hidden", false);
-    });
+        selectedTab.classList.remove("hidden");
+    }
 });
