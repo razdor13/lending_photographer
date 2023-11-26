@@ -1,5 +1,4 @@
 @import "libs/bootstrap-reboot.min";
-@import "libs/main";
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
 * {
@@ -10,6 +9,13 @@
 .container {
     width: 1200px;
     margin: 0 auto;
+}
+.tabs__content {
+    display: block;
+}
+
+.tabs__content.hidden {
+    display: none;
 }
 
 @import "blocks/promo";
