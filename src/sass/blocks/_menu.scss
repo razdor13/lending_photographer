@@ -1,0 +1,74 @@
+.menu {
+    &__wrepper {
+        padding: 57px 86px 75px 86px;
+        height: 549px;
+        justify-content: center;
+    }
+    &__title {
+        text-align: center;
+        font-size: 31px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 36px; /* 116.129% */
+        h2 {
+            text-transform: uppercase;
+        }
+        h3 {
+            margin-top: 22px;
+            color: rgba(115, 115, 115, 0.74);
+            text-align: center;
+            font-family: Droid Sans;
+            font-size: 19px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px; /* 157.895% */
+        }
+    }
+    &__content-wrepper {
+        justify-content: center;
+        display: grid;
+        margin-top: 62px;
+        grid-template-rows: 280px;
+        grid-template-columns: 220px 220px 220px 220px;
+        gap: 21px;
+        &-item {
+            display: flex;
+            flex-direction: column;
+            width: 219px;
+            text-align: center;
+            .icon-item {
+                justify-content: center;
+                display: flex;
+                img {
+                    display: block;
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            .title-item {
+                text-align: center;
+                margin-top: 19px;
+                color: #313131;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 30px; /* 176.471% */
+                text-transform: uppercase;
+            }
+            .descr-item {
+                margin-top: 11px;
+                color: rgba(0, 0, 0, 0.74);
+                font-family: Droid Sans;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px; /* 133.333% */
+            }
+            a {
+                color: #cf404d;
+                text-decoration: none;
+                margin-top: 7px;
+                display: block;
+            }
+        }
+    }
+}
