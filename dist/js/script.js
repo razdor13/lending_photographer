@@ -30,6 +30,23 @@ document.getElementById("app").addEventListener("click", function (event) {
         });
         tabButton.classList.add("tab-btn__active");
 
+        const animateNames = tabButton.querySelectorAll(".animate__animated");
+
+        // Видаляємо клас animate__pulse з усіх елементів з класом animate__animated
+        animateNames.forEach((animateName) => {
+            animateName.classList.remove("animate__pulse");
+        });
+
+        // Додаємо клас animate__pulse лише до елементів, які є дочірніми елементами натиснутої кнопки
+        animateNames.forEach((animateName) => {
+            animateName.classList.add("animate__pulse");
+        });
+
+        setTimeout(() => {
+            animateNames.forEach((animateName) => {
+                animateName.classList.remove("animate__pulse");
+            });
+        }, 500);
         const selectedTabId = tabButton.getAttribute("data-tab-content-id");
         const selectedTab = document.getElementById(selectedTabId);
 

@@ -39,10 +39,12 @@
             .icon-item {
                 justify-content: center;
                 display: flex;
+                position: relative;
                 img {
                     display: block;
                     width: 100px;
                     height: 100px;
+                    position: relative;
                 }
             }
             .title-item {
@@ -53,6 +55,27 @@
                 font-weight: 400;
                 line-height: 30px; /* 176.471% */
                 text-transform: uppercase;
+                position: relative;
+                &__love {
+                    &::before {
+                        content: ""; /* Додайте контент для псевдоелемента */
+                        position: absolute;
+                        display: block;
+                        top: -121px;
+                        left: 103px;
+                        width: 27px;
+                        height: 25px;
+                        /* Додайте URL вашого зображення в якості фону псевдоелементу */
+                        background: url("/img/lover.png");
+                        background-size: 27px;
+                        /* Інші стилі, які вам потрібні для розміщення і відображення */
+                        animation: bubble;
+                        animation-duration: 1.5s;
+                        animation-timing-function: ease;
+                        animation-iteration-count: infinite;
+                        animation-delay: 2s;
+                    }
+                }
             }
             .descr-item {
                 margin-top: 11px;
