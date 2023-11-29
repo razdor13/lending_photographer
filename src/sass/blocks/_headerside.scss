@@ -1,0 +1,155 @@
+$color-1: #1a1a1a;
+$color-2: #fefefe;
+$pad: 0.925rem;
+
+.hide {
+    display: none;
+}
+
+.head-nav {
+    li {
+        &:hover {
+            background-color: $color-1;
+            &:before {
+                background-color: $color-1;
+            }
+            svg {
+                background: $color-1;
+                fill: #cf404d;
+            }
+            a {
+                color: #cf404d;
+            }
+        }
+        &:before {
+            position: absolute;
+            left: -$pad;
+            top: 0;
+            width: $pad;
+            height: 100%;
+            content: "";
+            background: #cf404d;
+            z-index: 1;
+            transition: background 400ms;
+        }
+    }
+    ul {
+        margin: {
+            top: $pad * 2;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        padding: 0;
+        list-style: none;
+    }
+    li {
+        position: relative;
+        clear: both;
+        width: 100%;
+        padding: 0;
+        transition: background 400ms;
+        a {
+            display: flex;
+            padding: {
+                top: 7px;
+                bottom: 7px;
+            }
+        }
+    }
+    a {
+        align-items: center;
+        width: 100%;
+        color: $color-2;
+        text-decoration: none;
+        transition: color 400ms;
+        span {
+            position: relative;
+            display: block;
+            z-index: 0;
+            text-indent: -20em;
+            white-space: nowrap;
+            transition: text-indent 400ms ease-in-out;
+        }
+    }
+
+    svg {
+        position: relative;
+        max-width: 40px;
+        max-height: 20px;
+        z-index: 1;
+        fill: $color-2;
+        background: #000000;
+        transition: 400ms;
+    }
+    .tiktok {
+        max-height: 25px;
+    }
+    .nst {
+        max-height: 24px;
+    }
+    .telegram {
+        max-height: 23px;
+    }
+    .behance {
+        max-height: 22px;
+    }
+
+    @media screen and (max: 768px) {
+        ul {
+            margin: {
+                top: $pad;
+            }
+        }
+        svg {
+            max-width: 20px;
+        }
+    }
+}
+.main-head {
+    position: fixed;
+    bottom: 0;
+    width: 50px;
+    height: 100%;
+    z-index: 1;
+    background: #000000;
+    transition: width 400ms;
+    &:hover {
+        width: 150px;
+        & + .wrap-all-the-things {
+            transform: translateX(336px);
+            max-width: 100%;
+            opacity: 0.4;
+        }
+        .head-nav {
+            li {
+                @for $i from 1 through 4 {
+                    &:nth-of-type(#{$i}) {
+                        span {
+                            transition-delay: 100ms * $i;
+                        }
+                    }
+                }
+            }
+            span {
+                text-indent: 0;
+            }
+        }
+    }
+    @media screen and (max: 768px) {
+        width: 70px;
+        padding: 0 $pad;
+        .head-nav {
+            padding: {
+                left: 7px;
+            }
+        }
+        &:hover {
+            .head-nav {
+                span {
+                    text-indent: 1em;
+                }
+            }
+        }
+    }
+}

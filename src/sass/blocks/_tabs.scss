@@ -1,6 +1,6 @@
 .tabs {
     &__wrapper {
-        padding: 80px 0 80px;
+        padding: 80px 0 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -26,14 +26,14 @@
         }
     }
     &__content {
-        margin-top: 72px;
-        margin-bottom: 72px;
+        margin-top: 20px;
+        margin-bottom: 20px;
         display: grid;
         height: 100%;
         grid-row-gap: 5px;
         justify-content: center;
-        grid-template-rows: 340px 340px;
-        grid-template-columns: 233px 233px 233px 233px;
+        grid-template-rows: 500px 500px;
+        grid-template-columns: 340px 340px 340px 340px;
     }
     &__item {
         display: block;
@@ -43,10 +43,12 @@
             margin: 0 auto;
             display: block;
             max-width: 100%;
-            height: 340px;
+            max-height: 100%;
+            height: 100%;
         }
     }
     #app {
+        width: 100%;
         nav {
             width: 100%;
             height: 64px;

@@ -7,7 +7,7 @@
     padding: 0px;
 }
 .container {
-    width: 920px;
+    width: 1500px;
     margin: 0 auto;
 }
 .tabs__content {
@@ -23,6 +23,8 @@
 @import "blocks/devider";
 @import "blocks/tabs";
 @import "blocks/contact";
+@import "blocks/ask";
+@import "blocks/headerside";
 
 @media (max-width: 1200px) {
     .container {

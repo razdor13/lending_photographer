@@ -21,6 +21,7 @@ document.getElementById("app").addEventListener("click", function (event) {
 
     // Перевірка, чи було натиснуто на саму кнопку або її дочірній елемент
     const tabButton = clickedElement.closest(".tab-btn");
+    console.log(clickedElement.closest(".tab-btn"));
     if (tabButton) {
         const tabButtons = document.querySelectorAll(".tab-btn");
         const tabs = document.querySelectorAll(".tabs__content");
@@ -55,4 +56,14 @@ document.getElementById("app").addEventListener("click", function (event) {
         });
         selectedTab.classList.remove("hidden");
     }
+});
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+const accordions = document.querySelectorAll(".wrapper_ask");
+
+accordions.forEach(function (accordion) {
+    accordion.addEventListener("click", function () {
+        this.classList.toggle("active");
+    });
 });
