@@ -109,33 +109,12 @@ $pad: 0.925rem;
 .main-head {
     position: fixed;
     bottom: 0;
-    width: 50px;
+    width: 42px;
     height: 100%;
     z-index: 1;
     background: #000000;
     transition: width 400ms;
-    &:hover {
-        width: 150px;
-        & + .wrap-all-the-things {
-            transform: translateX(336px);
-            max-width: 100%;
-            opacity: 0.4;
-        }
-        .head-nav {
-            li {
-                @for $i from 1 through 4 {
-                    &:nth-of-type(#{$i}) {
-                        span {
-                            transition-delay: 100ms * $i;
-                        }
-                    }
-                }
-            }
-            span {
-                text-indent: 0;
-            }
-        }
-    }
+
     @media screen and (max: 768px) {
         width: 70px;
         padding: 0 $pad;
@@ -152,4 +131,26 @@ $pad: 0.925rem;
             }
         }
     }
+}
+.main-head.active {
+    width: 150px;
+    & + .wrap-all-the-things {
+        transform: translateX(336px);
+        max-width: 100%;
+        opacity: 0.4;
+    }
+    .head-nav {
+        li {
+            @for $i from 1 through 4 {
+                &:nth-of-type(#{$i}) {
+                    span {
+                        transition-delay: 100ms * $i;
+                    }
+                }
+            }
+        }
+        span {
+            text-indent: 0;
+        }
+    } /* Стилі, які застосовуються при торканні */
 }

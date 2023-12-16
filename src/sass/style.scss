@@ -7,7 +7,7 @@
     padding: 0px;
 }
 .container {
-    width: 1500px;
+    max-width: 950px;
     margin: 0 auto;
 }
 .tabs__content {
@@ -25,25 +25,6 @@
 @import "blocks/contact";
 @import "blocks/ask";
 @import "blocks/headerside";
-
-@media (max-width: 1200px) {
-    .container {
-        max-width: 960px;
-    }
-}
-@media (max-width: 992px) {
-    .container {
-        max-width: 720px;
-    }
-}
-@media (max-width: 768px) {
-    .container {
-        max-width: 540px;
-    }
-}
-@media (max-width: 576px) {
-    .container {
-        width: 100%;
-        padding: 0 10px;
-    }
-}
+@import "blocks/consultation";
+@import "blocks/footer";
+@import "blocks/media";
