@@ -1,6 +1,31 @@
+@media (max-width: 1500px) {
+    .tabs {
+        &__item {
+            width: 100%;
+            height: 400px; /* Задайте фіксовану висоту для карток */
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Заповнює простір, зберігаючи пропорції та обрізаючи зайві частини */
+                object-position: center; /* Вирівнює зображення по центру */
+                &:hover {
+                    transform: scale(1.05);
+                    transition: 0.3s;
+                    border-radius: 5px;
+                    border: 3px rgb(207, 64, 77) solid;
+                }
+            }
+        }
+        &__content {
+            grid-template-rows: 400px 400px;
+            grid-template-columns: 275px 275px 275px 275px;
+        }
+    }
+}
+
 @media (max-width: 1200px) {
     .promo {
-        padding-top: 170px;
+        padding-top: 150px;
         .container {
             margin-left: 90px;
         }
@@ -9,6 +34,44 @@
         }
         &__title-text {
             margin-right: 0px;
+        }
+    }
+    .tabs {
+        &__item {
+            width: 100%;
+            height: 440px; /* Задайте фіксовану висоту для карток */
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Заповнює простір, зберігаючи пропорції та обрізаючи зайві частини */
+                object-position: center; /* Вирівнює зображення по центру */
+                &:hover {
+                    transform: scale(1.05);
+                    transition: 0.3s;
+                    border-radius: 5px;
+                    border: 3px rgb(207, 64, 77) solid;
+                }
+            }
+        }
+        #app {
+            width: 70%;
+            nav {
+                .tab-btn {
+                    width: 130px;
+                }
+            }
+        }
+
+        &__content {
+            grid-template-rows: 440px 440px 440px 440px;
+            grid-template-columns: 300px 300px;
+        }
+    }
+    .consultation {
+        .container {
+            .rgb {
+                width: 120%;
+            }
         }
     }
 }
@@ -31,6 +94,104 @@
         }
         background-position-x: +40px;
         background-position-y: 28%;
+    }
+    .menu {
+        &__content-wrepper {
+            justify-content: center;
+            display: grid;
+            margin-top: 62px;
+            grid-template-rows: 280px 280px;
+            grid-template-columns: 220px 220px;
+            gap: 21px;
+            &-item {
+                display: flex;
+                flex-direction: column;
+                width: 219px;
+                text-align: center;
+
+                .icon-item {
+                    justify-content: center;
+                    display: flex;
+                    position: relative;
+                    img {
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                        position: relative;
+                    }
+                }
+                .title-item {
+                    text-align: center;
+                    margin-top: 19px;
+                    color: #313131;
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 30px; /* 176.471% */
+                    text-transform: uppercase;
+                    position: relative;
+                    &__love {
+                        &::before {
+                            content: ""; /* Додайте контент для псевдоелемента */
+                            position: absolute;
+                            display: block;
+                            top: -121px;
+                            left: 103px;
+                            width: 27px;
+                            height: 25px;
+                            /* Додайте URL вашого зображення в якості фону псевдоелементу */
+                            background: url("/img/lover.png");
+                            background-size: 27px;
+                            /* Інші стилі, які вам потрібні для розміщення і відображення */
+                            animation: bubble;
+                            animation-duration: 1.5s;
+                            animation-timing-function: ease;
+                            animation-iteration-count: infinite;
+                            animation-delay: 2s;
+                        }
+                    }
+                }
+                .descr-item {
+                    margin-top: 11px;
+                    color: rgba(0, 0, 0, 0.74);
+                    font-family: Droid Sans;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px; /* 133.333% */
+                }
+                a {
+                    color: #cf404d;
+                    text-decoration: none;
+                    margin-top: 7px;
+                    display: block;
+                }
+            }
+        }
+    }
+    .tabs {
+        &__item {
+            width: 100%;
+            height: 400px; /* Задайте фіксовану висоту для карток */
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Заповнює простір, зберігаючи пропорції та обрізаючи зайві частини */
+                object-position: center; /* Вирівнює зображення по центру */
+                &:hover {
+                    transform: scale(1.05);
+                    transition: 0.3s;
+                    border-radius: 5px;
+                    border: 3px rgb(207, 64, 77) solid;
+                }
+            }
+        }
+        #app {
+            width: 600px;
+        }
+        &__content {
+            grid-template-rows: 400px 400px 400px 400px;
+            grid-template-columns: 280px 280px;
+        }
     }
 }
 
@@ -60,7 +221,7 @@
             margin-right: 0px;
             line-height: 30px;
         }
-        background-position-x: +40px;
+        background-position-x: 40px;
         background-position-y: 28%;
         &__btns {
             display: flex;
@@ -117,6 +278,135 @@
             }
         }
     }
+    .menu {
+        &__content-wrepper {
+            justify-content: center;
+            display: grid;
+            margin-top: 62px;
+            grid-template-rows: 280px;
+            grid-template-columns: 220px;
+            gap: 21px;
+            &-item {
+                display: flex;
+                flex-direction: column;
+                width: 219px;
+                text-align: center;
+
+                .icon-item {
+                    justify-content: center;
+                    display: flex;
+                    position: relative;
+                    img {
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                        position: relative;
+                    }
+                }
+                .title-item {
+                    text-align: center;
+                    margin-top: 19px;
+                    color: #313131;
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 30px; /* 176.471% */
+                    text-transform: uppercase;
+                    position: relative;
+                    &__love {
+                        &::before {
+                            content: ""; /* Додайте контент для псевдоелемента */
+                            position: absolute;
+                            display: block;
+                            top: -121px;
+                            left: 103px;
+                            width: 27px;
+                            height: 25px;
+                            /* Додайте URL вашого зображення в якості фону псевдоелементу */
+                            background: url("/img/lover.png");
+                            background-size: 27px;
+                            /* Інші стилі, які вам потрібні для розміщення і відображення */
+                            animation: bubble;
+                            animation-duration: 1.5s;
+                            animation-timing-function: ease;
+                            animation-iteration-count: infinite;
+                            animation-delay: 2s;
+                        }
+                    }
+                }
+                .descr-item {
+                    margin-top: 11px;
+                    color: rgba(0, 0, 0, 0.74);
+                    font-family: Droid Sans;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px; /* 133.333% */
+                }
+                a {
+                    color: #cf404d;
+                    text-decoration: none;
+                    margin-top: 7px;
+                    display: block;
+                }
+            }
+        }
+    }
+    .devider {
+        padding: 44px 45px;
+        font-size: 20px;
+        .container {
+            .devider__descr {
+                padding-top: 5px;
+                font-size: 20px;
+            }
+        }
+    }
+    .tabs {
+        &__item {
+            width: 100%;
+            height: 500px; /* Задайте фіксовану висоту для карток */
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Заповнює простір, зберігаючи пропорції та обрізаючи зайві частини */
+                object-position: center; /* Вирівнює зображення по центру */
+                &:hover {
+                    transform: scale(1.05);
+                    transition: 0.3s;
+                    border-radius: 5px;
+                    border: 3px rgb(207, 64, 77) solid;
+                }
+            }
+        }
+        #app {
+            background-color: white;
+            width: 67%;
+            margin-left: 5%;
+            nav {
+                .tab-btn {
+                    width: 39px;
+                    img {
+                        margin-right: 0;
+                    }
+                    div {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &__content {
+            grid-template-rows: 500px 500px 500px 500px 500px 500px 500px 500px;
+            grid-template-columns: 500px;
+        }
+    }
+    .consultation {
+        .container {
+            .rgb {
+                margin-left: 50px;
+                width: 85%;
+            }
+        }
+    }
 }
 @media (max-width: 575px) {
     .promo {
@@ -145,5 +435,75 @@
         margin-left: 3px;
         width: 40px;
         height: 40px;
+    }
+    .devider {
+        height: 100px;
+        padding: 25px 10px 25px 50px;
+
+        font-size: 14px;
+        .container {
+            .devider__descr {
+                padding-top: 5px;
+                font-size: 12px;
+            }
+        }
+    }
+    .tabs {
+        &__item {
+            width: 100%;
+            height: 310px; /* Задайте фіксовану висоту для карток */
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Заповнює простір, зберігаючи пропорції та обрізаючи зайві частини */
+                object-position: center; /* Вирівнює зображення по центру */
+                &:hover {
+                    transform: scale(1.05);
+                    transition: 0.3s;
+                    border-radius: 5px;
+                    border: 3px rgb(207, 64, 77) solid;
+                }
+            }
+        }
+        #app {
+            background-color: white;
+            width: 67%;
+            margin-left: 5%;
+            nav {
+                .tab-btn {
+                    width: 39px;
+                    img {
+                        margin-right: 0;
+                    }
+                    div {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &__content {
+            grid-template-rows: 310px 310px 310px 310px 310px 310px 310px 310px;
+            grid-template-columns: 250px;
+        }
+    }
+    .consultation {
+        .container {
+            .rgb {
+                padding-top: 50px;
+                padding-bottom: 50px;
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-left: 50px;
+                width: 83%;
+                height: 100%;
+                .feed-form {
+                    width: 200px;
+                    .button_submit {
+                        width: 100%;
+                        background: none;
+                    }
+                }
+            }
+        }
     }
 }
