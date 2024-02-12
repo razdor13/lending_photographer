@@ -1,6 +1,6 @@
 .menu {
     &__wrepper {
-        padding: 57px 86px 75px 86px;
+        padding: 50px 0  50px 0;
         justify-content: center;
     }
     &__title {
@@ -27,7 +27,7 @@
         justify-content: center;
         display: grid;
         margin-top: 62px;
-        grid-template-rows: 280px;
+        grid-template-rows: 380px;
         grid-template-columns: 220px 220px 220px 220px;
         gap: 21px;
         &-item {

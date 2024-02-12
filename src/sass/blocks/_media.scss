@@ -100,7 +100,7 @@
             justify-content: center;
             display: grid;
             margin-top: 62px;
-            grid-template-rows: 280px 280px;
+            grid-template-rows: 380px 380px;
             grid-template-columns: 220px 220px;
             gap: 21px;
             &-item {
@@ -187,6 +187,9 @@
         }
         #app {
             width: 600px;
+            .tab-btn {
+                font-size: 15px;
+            }
         }
         &__content {
             grid-template-rows: 400px 400px 400px 400px;
@@ -283,7 +286,7 @@
             justify-content: center;
             display: grid;
             margin-top: 62px;
-            grid-template-rows: 280px;
+            grid-template-rows: 380px;
             grid-template-columns: 220px;
             gap: 21px;
             &-item {
@@ -382,8 +385,10 @@
             background-color: white;
             width: 67%;
             margin-left: 5%;
+            
             nav {
                 .tab-btn {
+                    font-size: 0;
                     width: 39px;
                     img {
                         margin-right: 0;
@@ -484,6 +489,16 @@
         &__content {
             grid-template-rows: 310px 310px 310px 310px 310px 310px 310px 310px;
             grid-template-columns: 250px;
+        }
+    }
+    .ask {
+        .accordion {
+            .label{
+                font-size: 15px;
+            }
+            .content {
+                font-size: 8px;
+            }
         }
     }
     .consultation {
